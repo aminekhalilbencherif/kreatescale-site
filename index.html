@@ -98,13 +98,17 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 
 /* Work wall */
 .work{padding-top:112px}
+.work .intro{text-align:center;max-width:720px;margin:0 auto}
 .work .intro p{margin:16px 0 0;font-size:18px;color:var(--text)}
 .wall{margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.ad{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);border:0;padding:0;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.ad{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.ad.full{cursor:default}
+.ad.full:hover{transform:none}
+.ad.full .play{display:none}
 .ad:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 26px 46px -14px var(--red-glow)}
-.ad:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.play:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .ad video,.ad img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:999px;background:var(--red);box-shadow:0 0 0 8px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border:0;padding:0;cursor:pointer;border-radius:999px;background:var(--red);box-shadow:0 0 0 8px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
 .ad:hover .play{transform:translate(-50%,-50%) scale(1.08)}
 .play svg{width:24px;height:24px;margin-left:3px;fill:#fff}
 .sound{position:absolute;left:12px;bottom:12px;font-size:12px;font-weight:600;color:#fff;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);border-radius:999px;padding:5px 10px}
@@ -167,14 +171,6 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 .foot-col a:hover{color:#fff}
 .copy{font-size:13px;color:#9A978F;padding-bottom:8px}
 .giant{margin:0;text-align:center;white-space:nowrap;font-family:var(--display);font-weight:700;font-size:clamp(64px,16.5vw,250px);line-height:.82;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px #4A4A4F;transform:translateY(12%)}
-
-/* Lightbox */
-dialog.viewer{padding:0;border:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%}
-dialog.viewer::backdrop{background:rgba(10,10,10,.88);backdrop-filter:blur(6px)}
-.viewer-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
-.viewer video{height:min(88vh,900px);width:auto;max-width:100%;aspect-ratio:9/16;border-radius:18px;background:#000;box-shadow:0 40px 80px -30px var(--red-glow)}
-.close{position:fixed;top:18px;right:18px;width:48px;height:48px;border-radius:999px;border:0;background:#fff;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center}
-.close svg{width:20px;height:20px}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -304,12 +300,6 @@ dialog.viewer::backdrop{background:rgba(10,10,10,.88);backdrop-filter:blur(6px)}
   <p class="giant" aria-hidden="true">KreateScale</p>
 </footer>
 
-<dialog class="viewer" id="viewer" aria-label="Ad player">
-  <div class="viewer-inner" id="viewer-inner">
-    <video id="viewer-video" controls playsinline></video>
-  </div>
-  <button class="close" id="viewer-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-</dialog>
 
 <script>
 (function () {
@@ -354,78 +344,79 @@ dialog.viewer::backdrop{background:rgba(10,10,10,.88);backdrop-filter:blur(6px)}
     ticker.appendChild(s);
   });
 
-  // Work wall: 12 ads. Each tile autoplays a short silent loop; tapping opens the full ad with sound.
+  // Work wall: 12 ads. Each tile autoplays a short silent loop; tapping plays the full ad
+  // with sound right inside the tile, never full screen.
   var wall = document.getElementById('wall');
   var ADS = 12;
   var playSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
   for (var n = 1; n <= ADS; n++) {
     var id = (n < 10 ? '0' : '') + n;
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'ad';
-    btn.dataset.full = 'assets/ads/' + id + '.mp4';
-    btn.setAttribute('aria-label', 'Watch ad ' + n + ' with sound');
-    btn.innerHTML =
-      '<video muted loop playsinline preload="none" poster="assets/ads/' + id + '-poster.jpg" data-src="assets/ads/' + id + '-loop.mp4" aria-hidden="true"></video>' +
-      '<span class="play">' + playSvg + '</span>';
-    wall.appendChild(btn);
+    var tile = document.createElement('div');
+    tile.className = 'ad';
+    tile.dataset.full = 'assets/ads/' + id + '.mp4';
+    tile.dataset.loop = 'assets/ads/' + id + '-loop.mp4';
+    tile.innerHTML =
+      '<video muted loop playsinline webkit-playsinline disablepictureinpicture preload="none" poster="assets/ads/' + id + '-poster.jpg" data-src="assets/ads/' + id + '-loop.mp4"></video>' +
+      '<button type="button" class="play" aria-label="Play ad ' + n + ' with sound">' + playSvg + '</button>';
+    wall.appendChild(tile);
   }
 
-  // Only load and play the loops that are on screen.
-  var loops = wall.querySelectorAll('video');
+  var current = null; // the tile playing its full ad
+
+  function backToLoop(tile) {
+    var v = tile.querySelector('video');
+    tile.classList.remove('full');
+    v.controls = false;
+    v.muted = true;
+    v.loop = true;
+    v.src = tile.dataset.loop;
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+
+  function playFull(tile) {
+    if (current && current !== tile) backToLoop(current);
+    current = tile;
+    var v = tile.querySelector('video');
+    tile.classList.add('full');
+    v.loop = false;
+    v.src = tile.dataset.full;
+    v.muted = false;
+    v.controls = true;
+    v.setAttribute('controlslist', 'nofullscreen nodownload noremoteplayback');
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+    v.onended = function () { backToLoop(tile); if (current === tile) current = null; };
+  }
+
+  wall.addEventListener('click', function (e) {
+    var tile = e.target.closest('.ad');
+    if (!tile || tile.classList.contains('full')) return; // the video's own controls handle it
+    playFull(tile);
+  });
+
+  // Only load and play the loops that are on screen; pause a full ad scrolled out of view.
+  var tiles = wall.querySelectorAll('.ad');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        var v = e.target;
+        var tile = e.target;
+        var v = tile.querySelector('video');
         if (e.isIntersecting) {
-          if (!v.src) v.src = v.dataset.src;
-          var p = v.play();
-          if (p && p.catch) p.catch(function () {});
-        } else if (v.src) {
+          if (!v.getAttribute('src')) v.src = v.dataset.src;
+          if (!tile.classList.contains('full')) {
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          }
+        } else if (v.getAttribute('src')) {
           v.pause();
         }
       });
     }, { rootMargin: '200px 0px' });
-    loops.forEach(function (v) { io.observe(v); });
+    tiles.forEach(function (t) { io.observe(t); });
   } else {
-    loops.forEach(function (v) { v.src = v.dataset.src; v.autoplay = true; });
+    tiles.forEach(function (t) { var v = t.querySelector('video'); v.src = v.dataset.src; v.autoplay = true; });
   }
-
-  // Full-ad viewer.
-  var dialog = document.getElementById('viewer');
-  var player = document.getElementById('viewer-video');
-  function closeViewer() {
-    player.pause();
-    player.removeAttribute('src');
-    player.load();
-    if (dialog.open) dialog.close();
-  }
-  wall.addEventListener('click', function (e) {
-    var tile = e.target.closest('.ad');
-    if (!tile) return;
-    player.src = tile.dataset.full;
-    if (typeof dialog.showModal === 'function') {
-      dialog.showModal();
-      var p = player.play();
-      if (p && p.catch) p.catch(function () {});
-    } else {
-      window.open(tile.dataset.full, '_blank');
-    }
-  });
-  // If a full ad isn't uploaded yet, fall back to its short loop.
-  player.addEventListener('error', function () {
-    var src = player.getAttribute('src') || '';
-    if (/\/\d{2}\.mp4$/.test(src)) {
-      player.src = src.replace(/\.mp4$/, '-loop.mp4');
-      var p = player.play();
-      if (p && p.catch) p.catch(function () {});
-    }
-  });
-  document.getElementById('viewer-close').addEventListener('click', closeViewer);
-  dialog.addEventListener('close', closeViewer);
-  document.getElementById('viewer-inner').addEventListener('click', function (e) {
-    if (e.target === this) closeViewer();
-  });
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
