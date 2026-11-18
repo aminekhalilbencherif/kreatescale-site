@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KreateScale — AI ad creatives, delivered in 7 days</title>
+<meta name="description" content="Scroll-stopping AI video ads for e-commerce, SaaS and lead-gen brands. Strategy, scripts and production. Your first 15 ads in 7 days.">
+<meta property="og:title" content="KreateScale — AI ad creatives, delivered in 7 days">
+<meta property="og:description" content="Scroll-stopping AI video ads for e-commerce, SaaS and lead-gen brands. Your first 15 ads in 7 days.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kreatescale.com/">
+<meta property="og:image" content="https://kreatescale.com/assets/ads/07-poster.jpg">
+<meta name="theme-color" content="#9B111E">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#9B111E; --red-glow:rgba(155,17,30,.6); --ink:#0A0A0A; --text:#3A3A3A; --muted:#5A5A5A;
+  --line:#E6E4E0; --soft:#F5F4F2;
+  --display:'Space Grotesk',system-ui,sans-serif; --serif:'Instrument Serif',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.wrap-wide{max-width:1284px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);margin:0}
+h2{font-weight:700;font-size:clamp(34px,4.6vw,60px);line-height:1.03;letter-spacing:-.035em}
+em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.red{color:var(--red)}
+section{scroll-margin-top:80px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 32px;border-radius:999px;background:var(--red);color:#fff;font-weight:600;font-size:17px;text-decoration:none;box-shadow:0 18px 36px -14px rgba(155,17,30,.75);transition:transform .2s ease,filter .2s ease}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.btn svg{width:20px;height:20px}
+.btn-sm{min-height:44px;padding:0 22px;font-size:15px;box-shadow:0 10px 24px -10px rgba(155,17,30,.7)}
+
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--red);display:inline-block;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+
+/* Nav */
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em}
+.brand span{color:var(--red);font-size:18px}
+.nav-links{display:flex;gap:28px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--text)}
+.nav-links a:hover{color:var(--ink)}
+@media (max-width:720px){.nav-links{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;text-align:center}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(#D9D6D1 1.2px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:linear-gradient(#000,#000 35%,transparent 85%);mask-image:linear-gradient(#000,#000 35%,transparent 85%);pointer-events:none}
+.hero .wrap{position:relative;padding-top:28px;padding-bottom:72px}
+.hero h1{margin:16px auto 0;max-width:980px;font-weight:700;font-size:clamp(34px,min(5.2vw,8.2vh),66px);line-height:1.04;letter-spacing:-.04em}
+.tag{display:inline-block;background:var(--red);color:#fff;padding:0 .2em .04em;border-radius:.14em;transform:rotate(-2deg)}
+.reel{margin:28px auto 0;display:flex;justify-content:center;gap:16px;height:clamp(260px,calc(100vh - 440px),520px)}
+.reel .phone{position:relative;height:100%;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--ink);box-shadow:0 30px 60px -24px var(--red-glow),0 14px 30px -16px rgba(10,10,10,.45)}
+.reel .phone:nth-child(2){transform:translateY(-12px)}
+.reel video{width:100%;height:100%;object-fit:cover}
+.hero-cta{margin-top:24px;display:flex;justify-content:center}
+@media (max-width:640px){.hero h1 br{display:none}.reel{height:auto;gap:10px}.reel .phone{height:auto;width:31%}.reel .phone:nth-child(2){transform:none}}
+
+/* Logos */
+.logos{border-top:1px solid var(--line)}
+.logos .label{margin:0;padding:48px 24px 12px;text-align:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.marquee{overflow:hidden;padding:16px 0 28px;display:flex;flex-direction:column;gap:12px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.track{display:flex;align-items:center;gap:64px;width:max-content;padding-left:64px;height:96px}
+.track img{width:auto;flex-shrink:0}
+.track.a{animation:scroll3 70s linear infinite}
+.track.b{animation:scroll3 60s linear infinite reverse}
+.track:hover{animation-play-state:paused}
+@keyframes scroll3{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
+@media (max-width:640px){.track{gap:44px;padding-left:44px;height:72px}.track img{transform:scale(.75)}}
+
+/* Pain band */
+.band{background:var(--red);color:#fff}
+.band .wrap{padding-top:104px;padding-bottom:104px}
+.band h2{max-width:860px;margin:0 auto;text-align:center}
+.cards4{margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.pain{background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:28px}
+.pain .n{margin:0;font-family:var(--display);font-size:40px;font-weight:700;line-height:1;letter-spacing:-.03em}
+.pain h3{margin-top:18px;font-size:21px;font-weight:600;letter-spacing:-.01em}
+.pain p{margin:10px 0 0;color:rgba(255,255,255,.88);font-size:15px}
+
+/* Ticker */
+.ticker{background:var(--ink);color:#fff;overflow:hidden;padding:20px 0}
+.ticker .row{display:flex;gap:28px;width:max-content;padding-left:28px;align-items:center;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;animation:scroll2 28s linear infinite}
+.ticker .row span{display:inline-flex;align-items:center;gap:28px}
+.ticker .row i{color:#E5484D;font-style:normal;font-size:18px}
+@keyframes scroll2{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Work wall */
+.work{padding-top:112px}
+.work .intro p{margin:16px 0 0;font-size:18px;color:var(--text)}
+.wall{margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ad{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);border:0;padding:0;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.ad:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 26px 46px -14px var(--red-glow)}
+.ad:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.ad video,.ad img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:999px;background:var(--red);box-shadow:0 0 0 8px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.ad:hover .play{transform:translate(-50%,-50%) scale(1.08)}
+.play svg{width:24px;height:24px;margin-left:3px;fill:#fff}
+.sound{position:absolute;left:12px;bottom:12px;font-size:12px;font-weight:600;color:#fff;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);border-radius:999px;padding:5px 10px}
+@media (max-width:1000px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){
+  .wall{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}
+  .ad{flex:0 0 62%;scroll-snap-align:start}
+  .ad:hover{transform:none}
+}
+
+/* Process */
+.process{margin-top:112px;background:var(--soft)}
+.process .wrap{padding-top:104px;padding-bottom:104px}
+.step{background:#fff;border:1.5px solid var(--ink);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,box-shadow .25s ease}
+.step:hover{transform:translateY(-4px);box-shadow:0 22px 44px -18px rgba(10,10,10,.35)}
+.step .n{margin:0;font-family:var(--display);font-weight:700;font-size:52px;line-height:1;letter-spacing:-.04em;color:var(--red)}
+.step h3{margin-top:8px;font-size:22px;font-weight:600;letter-spacing:-.01em}
+.step p{margin:0;color:var(--text);font-size:15px}
+.step.dark{background:var(--ink);color:#fff}
+.step.dark .n{color:#fff}
+.step.dark p{color:#DDDAD6}
+
+/* Book */
+.book{padding-top:112px}
+.panel{background:var(--red);color:#fff;border-radius:36px;padding:80px 24px 72px;box-shadow:0 50px 90px -40px rgba(155,17,30,.7);text-align:center}
+.panel .pill{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.panel .pill .dot{background:#fff}
+.panel h2{margin:24px auto 0;max-width:900px;font-size:clamp(36px,5.2vw,72px);line-height:1.01;letter-spacing:-.04em}
+.panel p.lead{margin:20px auto 0;max-width:560px;font-size:18px;color:rgba(255,255,255,.9)}
+.cal{margin:48px auto 0;max-width:1000px;border-radius:22px;background:#fff;overflow:hidden;box-shadow:0 30px 60px -24px rgba(0,0,0,.55)}
+.calendly-inline-widget{min-width:320px;height:720px}
+@media (max-width:640px){.panel{border-radius:24px;padding:56px 12px 12px}.calendly-inline-widget{height:1000px}}
+
+/* FAQ */
+.faq{padding-top:112px}
+.faq-grid{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.faq-side{flex:1 1 300px;min-width:0}
+.faq-side h2{font-size:clamp(34px,4.2vw,56px)}
+.faq-side p{margin:18px 0 0;font-size:17px;color:var(--text);max-width:360px}
+.faq-side .btn{margin-top:28px}
+.faq-list{flex:2 1 480px;min-width:0;border-top:1.5px solid var(--ink)}
+details{border-bottom:1.5px solid var(--ink)}
+summary{list-style:none;cursor:pointer;min-height:68px;padding:20px 8px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--display);font-size:20px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--soft)}
+summary .ico{width:32px;height:32px;border-radius:999px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s ease}
+summary .ico svg{width:16px;height:16px}
+details[open] summary .ico{transform:rotate(45deg)}
+details p{margin:0;padding:0 8px 24px;color:var(--text);max-width:640px}
+
+/* Footer */
+footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
+.foot{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;padding-top:56px;padding-bottom:32px}
+.foot .brand span{color:#E5484D}
+.foot p.tagline{margin:10px 0 0;color:#B8B5AF;font-size:15px;max-width:320px}
+.foot-cols{display:flex;gap:56px;flex-wrap:wrap}
+.foot-col{display:flex;flex-direction:column;gap:10px;font-size:15px}
+.foot-col .h{margin:0 0 4px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9A978F}
+.foot-col a{text-decoration:none;color:#DDDAD6}
+.foot-col a:hover{color:#fff}
+.copy{font-size:13px;color:#9A978F;padding-bottom:8px}
+.giant{margin:0;text-align:center;white-space:nowrap;font-family:var(--display);font-weight:700;font-size:clamp(64px,16.5vw,250px);line-height:.82;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px #4A4A4F;transform:translateY(12%)}
+
+/* Lightbox */
+dialog.viewer{padding:0;border:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%}
+dialog.viewer::backdrop{background:rgba(10,10,10,.88);backdrop-filter:blur(6px)}
+.viewer-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+.viewer video{height:min(88vh,900px);width:auto;max-width:100%;aspect-ratio:9/16;border-radius:18px;background:#000;box-shadow:0 40px 80px -30px var(--red-glow)}
+.close{position:fixed;top:18px;right:18px;width:48px;height:48px;border-radius:999px;border:0;background:#fff;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.close svg{width:20px;height:20px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .track,.ticker .row,.dot{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span>⬦</span>KreateScale</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#process">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-sm" href="#book">Book a call</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="pill"><span class="dot"></span>AI-powered performance creative</p>
+    <h1>15 scroll-stopping AI ads,<br> <em class="s">delivered in</em> <span class="tag">7 days.</span></h1>
+    <div class="reel" aria-label="Examples of our ads">
+      <div class="phone"><video src="assets/ads/03-loop.mp4" poster="assets/ads/03-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video></div>
+      <div class="phone"><video src="assets/ads/07-loop.mp4" poster="assets/ads/07-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video></div>
+      <div class="phone"><video src="assets/ads/10-loop.mp4" poster="assets/ads/10-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="logos" aria-label="Clients">
+  <p class="label">Trusted by 7- and 8-figure brands across Europe and the US</p>
+  <div class="marquee">
+    <div class="track a" id="logos-a"></div>
+    <div class="track b" id="logos-b"></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>If this sounds familiar, <em class="s">we should talk.</em></h2>
+    <div class="cards4">
+      <div class="pain"><p class="n">01</p><h3>Creative ships too slowly</h3><p>Shoot days, creator sourcing, editors, revisions. Weeks pass before a single new ad goes live.</p></div>
+      <div class="pain"><p class="n">02</p><h3>Fatigue is eating your ROAS</h3><p>The same five ads have run for months. CPMs creep up, CPA follows, and scaling spend stops working.</p></div>
+      <div class="pain"><p class="n">03</p><h3>Lots of tests, no winners</h3><p>You have ideas and you test them, but nothing breaks out and nothing scales.</p></div>
+      <div class="pain"><p class="n">04</p><h3>Your last agency shipped AI slop</h3><p>Great pitch deck, generic output. Ads that look AI-made and get scrolled past.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="row" id="ticker"></div></div>
+
+<section class="work" id="work">
+  <div class="wrap-wide">
+    <div class="intro">
+      <h2>Ads that <em class="s red">stop the scroll.</em></h2>
+      <p>Fully AI-generated. Built native to the feed. Tap any ad to watch it with sound.</p>
+    </div>
+    <div class="wall" id="wall"></div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <h2>From brief to launch-ready <em class="s red">in four steps.</em></h2>
+    <div class="cards4" style="margin-top:48px">
+      <div class="step"><p class="n">01</p><h3>Research</h3><p>We dig through your reviews, Reddit threads and competitors' ads in the Meta Ad Library to find the words your customers actually use.</p></div>
+      <div class="step"><p class="n">02</p><h3>Concepts &amp; scripts</h3><p>Angles, formats and scripts, with 3 to 4 hook variations per concept so every idea gets a real test.</p></div>
+      <div class="step"><p class="n">03</p><h3>Your approval</h3><p>You review the scripts before anything is produced. Nothing ships without your sign-off.</p></div>
+      <div class="step dark"><p class="n">04</p><h3>Produce &amp; deliver</h3><p>AI actors, voices, b-roll and edits, delivered ready to launch. You or your media buyer take it live.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap-wide">
+    <div class="panel">
+      <p class="pill"><span class="dot"></span>Book a call</p>
+      <h2>Ready for ads your customers <em class="s">can't scroll past?</em></h2>
+      <p class="lead">Pick a time below. We'll look at your current ads, tell you what we'd test first and walk you through pricing.</p>
+      <div class="cal">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/aminekhelilbencherif/kreatescale-discovery-calls?hide_gdpr_banner=1&amp;primary_color=9b111e"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <h2>Questions we get <em class="s red">on every call.</em></h2>
+      <p>Don't see yours? Ask it on the call.</p>
+      <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Is it really all AI?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>The actors, voices and b-roll are AI-generated. The strategy, research, scripts and editing are done by people who have been making performance ads for years.</p></details>
+      <details><summary>Do you run the ads too?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>No. We focus 100% on creative. You or your media buyer launch the ads, and we work alongside them on what to test next.</p></details>
+      <details><summary>How fast do I get my first ads?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Your first batch of 15 ads lands in under 7 days, after you approve the scripts.</p></details>
+      <details><summary>What does it cost?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>It depends on how many ads you need each month and which formats. We go through it on a short call and send you a clear quote.</p></details>
+      <details><summary>Which industries do you work with?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>E-commerce and DTC brands, SaaS, lead-gen businesses, franchises, law firms and online communities. Anyone running paid social who needs more creative.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><span>⬦</span>KreateScale</a>
+      <p class="tagline">AI ad creatives for brands that need more winners, faster.</p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><p class="h">Site</p><a href="#work">Work</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a href="#book">Book a call</a></div>
+      <div class="foot-col"><p class="h">Follow</p><a href="https://www.instagram.com/kreatescale" rel="noopener" target="_blank">Instagram</a><a href="https://x.com/amine_ads" rel="noopener" target="_blank">X</a></div>
+    </div>
+  </div>
+  <div class="wrap copy">© <span id="year">2026</span> KreateScale. All rights reserved.</div>
+  <p class="giant" aria-hidden="true">KreateScale</p>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-label="Ad player">
+  <div class="viewer-inner" id="viewer-inner">
+    <video id="viewer-video" controls playsinline></video>
+  </div>
+  <button class="close" id="viewer-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</dialog>
+
+<script>
+(function () {
+  // Client logos: [file, name, height in px]. The first row leads with the best-known brands.
+  var rowA = [
+    ['arcads', 'Arcads', 52], ['nancy', 'Nancy', 72], ['im8', 'IM8', 60], ['ufc', 'UFC', 64],
+    ['raptv', 'RapTV', 80], ['smel', 'Smel', 60], ['stryde', 'Stryde', 64],
+    ['healthson', 'Healthson', 42], ['reussir', 'Réussir Franchise', 60]
+  ];
+  var rowB = [
+    ['airestech', 'Airestech', 46], ['acl', 'Ad Creators Lab', 84], ['epicadslab', 'Epic Ads Lab', 76],
+    ['lysulin', 'Lysulin', 56], ['rbc', 'Rugged Beard Company', 92], ['rehm', 'Rehm Copy', 72],
+    ['vpp', 'Video Production+', 40], ['wonderspray', "Dr. Burd's Wonder Spray", 84]
+  ];
+  function fillTrack(el, logos) {
+    // Three copies so the loop never shows a gap, even on very wide screens.
+    for (var copy = 0; copy < 3; copy++) {
+      logos.forEach(function (l) {
+        var img = document.createElement('img');
+        img.src = 'assets/logos/' + l[0] + '.png';
+        img.alt = copy === 0 ? l[1] : '';
+        if (copy > 0) img.setAttribute('aria-hidden', 'true');
+        img.style.height = l[2] + 'px';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        el.appendChild(img);
+      });
+    }
+  }
+  fillTrack(document.getElementById('logos-a'), rowA);
+  fillTrack(document.getElementById('logos-b'), rowB);
+
+  // Format ticker, doubled for a seamless loop.
+  var formats = ['UGC avatars', 'Podcast ads', 'Street interviews', 'Cinematic drama', 'Claymation', 'Animated explainers', 'Split-screen'];
+  var ticker = document.getElementById('ticker');
+  formats.concat(formats).forEach(function (f) {
+    var s = document.createElement('span');
+    s.textContent = f;
+    var i = document.createElement('i');
+    i.textContent = '⬦';
+    s.appendChild(i);
+    ticker.appendChild(s);
+  });
+
+  // Work wall: 12 ads. Each tile autoplays a short silent loop; tapping opens the full ad with sound.
+  var wall = document.getElementById('wall');
+  var ADS = 12;
+  var playSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+  for (var n = 1; n <= ADS; n++) {
+    var id = (n < 10 ? '0' : '') + n;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ad';
+    btn.dataset.full = 'assets/ads/' + id + '.mp4';
+    btn.setAttribute('aria-label', 'Watch ad ' + n + ' with sound');
+    btn.innerHTML =
+      '<video muted loop playsinline preload="none" poster="assets/ads/' + id + '-poster.jpg" data-src="assets/ads/' + id + '-loop.mp4" aria-hidden="true"></video>' +
+      '<span class="play">' + playSvg + '</span>';
+    wall.appendChild(btn);
+  }
+
+  // Only load and play the loops that are on screen.
+  var loops = wall.querySelectorAll('video');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (!v.src) v.src = v.dataset.src;
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        } else if (v.src) {
+          v.pause();
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    loops.forEach(function (v) { io.observe(v); });
+  } else {
+    loops.forEach(function (v) { v.src = v.dataset.src; v.autoplay = true; });
+  }
+
+  // Full-ad viewer.
+  var dialog = document.getElementById('viewer');
+  var player = document.getElementById('viewer-video');
+  function closeViewer() {
+    player.pause();
+    player.removeAttribute('src');
+    player.load();
+    if (dialog.open) dialog.close();
+  }
+  wall.addEventListener('click', function (e) {
+    var tile = e.target.closest('.ad');
+    if (!tile) return;
+    player.src = tile.dataset.full;
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+      var p = player.play();
+      if (p && p.catch) p.catch(function () {});
+    } else {
+      window.open(tile.dataset.full, '_blank');
+    }
+  });
+  // If a full ad isn't uploaded yet, fall back to its short loop.
+  player.addEventListener('error', function () {
+    var src = player.getAttribute('src') || '';
+    if (/\/\d{2}\.mp4$/.test(src)) {
+      player.src = src.replace(/\.mp4$/, '-loop.mp4');
+      var p = player.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+  });
+  document.getElementById('viewer-close').addEventListener('click', closeViewer);
+  dialog.addEventListener('close', closeViewer);
+  document.getElementById('viewer-inner').addEventListener('click', function (e) {
+    if (e.target === this) closeViewer();
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
