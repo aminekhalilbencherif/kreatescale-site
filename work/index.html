@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KreateScale — AI ad production at volume</title>
-<meta name="description" content="Send the brief, get launch-ready AI ads back. Specialist editors for every format, unlimited revisions, and the volume to scale.">
+<title>KreateScale — Our work: AI ads for 8- and 9-figure brands</title>
+<meta name="description" content="A slice of the 400+ AI ads KreateScale has produced, and how we produce them at volume: specialist editors, unlimited revisions, launch-ready files.">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="KreateScale — AI ad production at volume">
-<meta property="og:description" content="Send the brief, get launch-ready AI ads back. Specialist editors, unlimited revisions, real volume.">
+<meta property="og:title" content="KreateScale — Our work">
+<meta property="og:description" content="A slice of the 400+ AI ads we've produced, and how we produce them at volume.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kreatescale.com/work">
 <meta property="og:image" content="https://kreatescale.com/assets/ads/07-poster.jpg">
@@ -60,11 +60,11 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 /* Hero */
 .hero{position:relative;overflow:hidden;text-align:center}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(#D9D6D1 1.2px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:linear-gradient(#000,#000 35%,transparent 90%);mask-image:linear-gradient(#000,#000 35%,transparent 90%);pointer-events:none}
-.hero .wrap{position:relative;padding-top:56px;padding-bottom:56px}
-.hero h1{margin:20px auto 0;max-width:1000px;font-weight:700;font-size:clamp(38px,6vw,80px);line-height:1.03;letter-spacing:-.04em}
+.hero .wrap{position:relative;padding-top:22px;padding-bottom:4px}
+.hero h1{margin:14px auto 0;font-weight:700;font-size:clamp(64px,min(10vw,15vh),136px);line-height:.95;letter-spacing:-.05em}
 .tag{display:inline-block;background:var(--red);color:#fff;padding:0 .2em .04em;border-radius:.14em;transform:rotate(-2deg)}
-.hero .sub{margin:24px auto 0;max-width:640px;font-size:19px;color:var(--text)}
-.hero-cta{margin-top:32px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.sub{margin:18px auto 0;max-width:640px;font-size:19px;color:var(--text)}
+.hero-cta{margin-top:24px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .stats{margin:52px auto 0;max-width:980px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid var(--ink);border-radius:20px;background:#fff;overflow:hidden}
 .stat{padding:22px 12px;border-left:1.5px solid var(--ink)}
 .stat:first-child{border-left:0}
@@ -76,8 +76,13 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
   .stat:nth-child(n+3){border-top:1.5px solid var(--ink)}
 }
 
+/* Pitch */
+.pitch{padding-top:104px;text-align:center}
+.pitch h2{margin:20px auto 0;max-width:1000px;font-size:clamp(36px,5.4vw,72px);line-height:1.04;letter-spacing:-.04em}
+.pitch .sub{margin-top:24px}
+
 /* Logos */
-.logos{border-top:1px solid var(--line)}
+.logos{margin-top:72px;border-top:1px solid var(--line)}
 .logos .label{margin:0;padding:40px 24px 4px;text-align:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 .marquee{overflow:hidden;padding:12px 0 24px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
 .track{display:flex;align-items:center;gap:60px;width:max-content;padding-left:60px;height:84px;animation:scroll2 80s linear infinite}
@@ -93,11 +98,8 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 .ticker .row i{color:#E5484D;font-style:normal;font-size:18px}
 
 /* Work wall */
-.work{padding-top:96px}
-.work .intro{text-align:center;max-width:1000px;margin:0 auto}
-.work .intro h2{font-size:clamp(48px,7.4vw,104px);line-height:1;letter-spacing:-.045em}
-.work .intro p{margin:16px 0 0;font-size:17px;color:var(--text)}
-.wall{margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.work{padding-top:0}
+.wall{margin-top:26px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .ad{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
 .ad[hidden]{display:none}
 .ad.full{cursor:default}
@@ -111,7 +113,7 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 .play svg{width:24px;height:24px;margin-left:3px;fill:#fff}
 .more{margin-top:32px;display:flex;justify-content:center}
 .more[hidden]{display:none}
-.after-wall{margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.after-wall{margin-top:56px;padding-bottom:96px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
 .after-wall p{margin:0;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.2}
 @media (max-width:1000px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:640px){
@@ -123,7 +125,7 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 }
 
 /* Process */
-.process{margin-top:112px;background:var(--soft)}
+.process{margin-top:48px;background:var(--soft)}
 .process .wrap{padding-top:104px;padding-bottom:104px}
 .process .lead{margin:18px 0 0;max-width:640px;font-size:18px;color:var(--text)}
 .steps{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -204,7 +206,7 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
   <div class="wrap nav">
     <a class="brand" href="/"><span>⬦</span>KreateScale</a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#work">The work</a>
+      <a href="#top">The work</a>
       <a href="#process">How we produce</a>
       <a href="#why">Why us</a>
       <a href="#faq">FAQ</a>
@@ -217,13 +219,34 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 
 <section class="hero" id="top">
   <div class="wrap">
-    <p class="pill"><span class="dot"></span>AI ad production, done for you</p>
-    <h1>Send the brief. Get <em class="s" style="white-space:nowrap">launch-ready</em> AI ads back, <span class="tag">at volume.</span></h1>
-    <p class="sub">Your scripts, our specialist AI editors. No hiring, no training, no managing. Unlimited revisions on every ad.</p>
+    <p class="pill"><span class="dot"></span>Portfolio</p>
+    <h1>The <em class="s red">work.</em></h1>
+    <p class="sub">A slice of the 400+ AI ads we've produced for 8- and 9-figure brands. Tap any ad to watch it with sound.</p>
     <div class="hero-cta">
       <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="#work">See the work</a>
+      <a class="btn btn-ghost" href="#process">How we produce</a>
     </div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-label="Our ads">
+  <div class="wrap-wide">
+    <div class="wall" id="wall"></div>
+    <div class="more" id="more" hidden><button type="button" class="btn btn-ghost" id="more-btn">Show more ads</button></div>
+    <div class="after-wall">
+      <p>Want this quality, at this volume, for your brand?</p>
+      <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="row" id="ticker"></div></div>
+
+<section class="pitch" id="production">
+  <div class="wrap">
+    <p class="pill"><span class="dot"></span>AI ad production, done for you</p>
+    <h2>Send the brief. Get <em class="s" style="white-space:nowrap">launch-ready</em> AI ads back, <span class="tag">at volume.</span></h2>
+    <p class="sub">Your scripts, our specialist AI editors. No hiring, no training, no managing. Unlimited revisions on every ad.</p>
     <div class="stats">
       <div class="stat"><b>400+</b><span>ads produced</span></div>
       <div class="stat"><b>40+</b><span>brands served</span></div>
@@ -236,23 +259,6 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 <section class="logos" aria-label="Clients">
   <p class="label">Trusted by 8- and 9-figure brands across 20+ niches</p>
   <div class="marquee"><div class="track" id="logos"></div></div>
-</section>
-
-<div class="ticker" aria-hidden="true"><div class="row" id="ticker"></div></div>
-
-<section class="work" id="work">
-  <div class="wrap-wide">
-    <div class="intro">
-      <h2>The <em class="s red">work.</em></h2>
-      <p>A slice of the 400+ ads we've produced. Tap any ad to watch it with sound.</p>
-    </div>
-    <div class="wall" id="wall"></div>
-    <div class="more" id="more" hidden><button type="button" class="btn btn-ghost" id="more-btn">Show more ads</button></div>
-    <div class="after-wall">
-      <p>Want this quality, at this volume, for your brand?</p>
-      <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-  </div>
 </section>
 
 <section class="process" id="process">
@@ -323,7 +329,7 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
       <p class="tagline">AI ad creatives at scale for brands that need more winners, faster.</p>
     </div>
     <div class="foot-cols">
-      <div class="foot-col"><p class="h">This page</p><a href="#work">The work</a><a href="#process">How we produce</a><a href="#faq">FAQ</a><a href="#book">Book a call</a></div>
+      <div class="foot-col"><p class="h">This page</p><a href="#top">The work</a><a href="#process">How we produce</a><a href="#faq">FAQ</a><a href="#book">Book a call</a></div>
       <div class="foot-col"><p class="h">KreateScale</p><a href="/">Full service</a><a href="https://www.instagram.com/kreatescale" rel="noopener" target="_blank">Instagram</a><a href="https://x.com/amine_ads" rel="noopener" target="_blank">X</a></div>
     </div>
   </div>
