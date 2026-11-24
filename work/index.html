@@ -61,10 +61,11 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 .hero{position:relative;overflow:hidden;text-align:center}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(#D9D6D1 1.2px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:linear-gradient(#000,#000 35%,transparent 90%);mask-image:linear-gradient(#000,#000 35%,transparent 90%);pointer-events:none}
 .hero .wrap{position:relative;padding-top:22px;padding-bottom:4px}
-.hero h1{margin:14px auto 0;font-weight:700;font-size:clamp(64px,min(10vw,15vh),136px);line-height:.95;letter-spacing:-.05em}
+.hero h1{margin:16px auto 0;max-width:1100px;font-weight:700;font-size:clamp(36px,min(5.6vw,9.4vh),80px);line-height:1.02;letter-spacing:-.045em}
 .tag{display:inline-block;background:var(--red);color:#fff;padding:0 .2em .04em;border-radius:.14em;transform:rotate(-2deg)}
 .sub{margin:18px auto 0;max-width:640px;font-size:19px;color:var(--text)}
-.hero-cta{margin-top:24px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.hero .sub{margin-top:12px;font-size:16px;color:var(--muted)}
+.hero-cta{margin-top:20px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .stats{margin:52px auto 0;max-width:980px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid var(--ink);border-radius:20px;background:#fff;overflow:hidden}
 .stat{padding:22px 12px;border-left:1.5px solid var(--ink)}
 .stat:first-child{border-left:0}
@@ -78,7 +79,7 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 
 /* Pitch */
 .pitch{padding-top:104px;text-align:center}
-.pitch h2{margin:20px auto 0;max-width:1000px;font-size:clamp(36px,5.4vw,72px);line-height:1.04;letter-spacing:-.04em}
+.pitch h2{margin:0 auto;max-width:1000px;font-size:clamp(36px,5.4vw,72px);line-height:1.04;letter-spacing:-.04em}
 .pitch .sub{margin-top:24px}
 
 /* Logos */
@@ -99,29 +100,29 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 
 /* Work wall */
 .work{padding-top:0}
-.wall{margin-top:26px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.ad{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.wall{margin-top:26px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-flow:row dense;gap:12px}
+.ad{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--ink);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
 .ad[hidden]{display:none}
-.ad.full{cursor:default}
+.ad.full{cursor:default;border-radius:18px;box-shadow:0 30px 60px -20px var(--red-glow)}
 .ad.full:hover{transform:none}
 .ad.full .play{display:none}
 .ad:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 26px 46px -14px var(--red-glow)}
 .play:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .ad video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border:0;padding:0;cursor:pointer;border-radius:999px;background:var(--red);box-shadow:0 0 0 8px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border:0;padding:0;cursor:pointer;border-radius:999px;background:var(--red);box-shadow:0 0 0 6px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
 .ad:hover .play{transform:translate(-50%,-50%) scale(1.08)}
-.play svg{width:24px;height:24px;margin-left:3px;fill:#fff}
+.play svg{width:18px;height:18px;margin-left:2px;fill:#fff}
 .more{margin-top:32px;display:flex;justify-content:center}
 .more[hidden]{display:none}
 .after-wall{margin-top:56px;padding-bottom:96px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
 .after-wall p{margin:0;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.2}
-@media (max-width:1000px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:1000px){.wall{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (max-width:640px){
-  .wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-  .ad{border-radius:12px}
+  .wall{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .ad{border-radius:10px}
   .ad:hover{transform:none}
-  .play{width:52px;height:52px;box-shadow:0 0 0 6px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6)}
-  .play svg{width:18px;height:18px}
+  .play{width:40px;height:40px;box-shadow:0 0 0 5px rgba(155,17,30,.3),0 10px 22px -8px rgba(0,0,0,.6)}
+  .play svg{width:14px;height:14px}
 }
 
 /* Process */
@@ -219,9 +220,9 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 
 <section class="hero" id="top">
   <div class="wrap">
-    <p class="pill"><span class="dot"></span>Portfolio</p>
-    <h1>The <em class="s red">work.</em></h1>
-    <p class="sub">A slice of the 400+ AI ads we've produced for 8- and 9-figure brands. Tap any ad to watch it with sound.</p>
+    <p class="pill"><span class="dot"></span>AI ad production, done for you at scale</p>
+    <h1>400+ AI ads shipped.<br> <em class="s red">Judge them yourself.</em></h1>
+    <p class="sub">Tap any ad to watch it with sound.</p>
     <div class="hero-cta">
       <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost" href="#process">How we produce</a>
@@ -244,7 +245,6 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 
 <section class="pitch" id="production">
   <div class="wrap">
-    <p class="pill"><span class="dot"></span>AI ad production, done for you</p>
     <h2>Send the brief. Get <em class="s" style="white-space:nowrap">launch-ready</em> AI ads back, <span class="tag">at volume.</span></h2>
     <p class="sub">Your scripts, our specialist AI editors. No hiring, no training, no managing. Unlimited revisions on every ad.</p>
     <div class="stats">
@@ -411,6 +411,8 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
   function backToLoop(tile) {
     var v = tile.querySelector('video');
     tile.classList.remove('full');
+    tile.style.gridColumn = '';
+    tile.style.gridRow = '';
     v.controls = false;
     v.muted = true;
     v.loop = true;
@@ -423,7 +425,16 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
     if (current && current !== tile) backToLoop(current);
     current = tile;
     var v = tile.querySelector('video');
+    // Grow the tile to 2 x 2 cells where it stands, so the ad is big enough to watch
+    // without going full screen. The other tiles flow around it.
+    var cols = getComputedStyle(wall).gridTemplateColumns.split(' ').length;
+    var visible = Array.prototype.slice.call(wall.querySelectorAll('.ad:not([hidden])'));
+    var i = visible.indexOf(tile);
+    var col = Math.min(i % cols, cols - 2);
+    tile.style.gridColumn = (col + 1) + ' / span 2';
+    tile.style.gridRow = (Math.floor(i / cols) + 1) + ' / span 2';
     tile.classList.add('full');
+    if (tile.scrollIntoView) tile.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     v.loop = false;
     v.src = tile.dataset.full;
     v.muted = false;
