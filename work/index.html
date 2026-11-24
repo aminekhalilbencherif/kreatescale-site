@@ -13,6 +13,7 @@
 <meta property="og:image" content="https://kreatescale.com/assets/ads/07-poster.jpg">
 <meta name="theme-color" content="#9B111E">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -50,8 +51,8 @@ section{scroll-margin-top:80px}
 /* Nav */
 header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em}
-.brand span{color:var(--red);font-size:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em}
+.brand .mark{width:30px;height:30px;border-radius:7px}
 .nav-links{display:flex;gap:28px;font-size:15px;font-weight:500}
 .nav-links a{text-decoration:none;color:var(--text)}
 .nav-links a:hover{color:var(--ink)}
@@ -185,7 +186,6 @@ details p a{color:var(--red);font-weight:600}
 /* Footer */
 footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 .foot{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;padding-top:56px;padding-bottom:32px}
-.foot .brand span{color:#E5484D}
 .foot p.tagline{margin:10px 0 0;color:#B8B5AF;font-size:15px;max-width:320px}
 .foot-cols{display:flex;gap:56px;flex-wrap:wrap}
 .foot-col{display:flex;flex-direction:column;gap:10px;font-size:15px}
@@ -205,7 +205,7 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="/"><span>⬦</span>KreateScale</a>
+    <a class="brand" href="/"><img class="mark" src="/assets/logo.svg" alt="" width="30" height="30">KreateScale</a>
     <nav class="nav-links" aria-label="Main">
       <a href="#top">The work</a>
       <a href="#process">How we produce</a>
@@ -325,7 +325,7 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 <footer>
   <div class="wrap foot">
     <div>
-      <a class="brand" href="/"><span>⬦</span>KreateScale</a>
+      <a class="brand" href="/"><img class="mark" src="/assets/logo.svg" alt="" width="30" height="30">KreateScale</a>
       <p class="tagline">AI ad creatives at scale for brands that need more winners, faster.</p>
     </div>
     <div class="foot-cols">
