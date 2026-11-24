@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KreateScale — AI ad creatives, delivered in 7 days</title>
-<meta name="description" content="AI ad creatives at scale for 8- and 9-figure brands. Research, scripts and production. Your first 15 scroll-stopping ads in 7 days.">
-<meta property="og:title" content="KreateScale — AI ad creatives, delivered in 7 days">
-<meta property="og:description" content="Scroll-stopping AI video ads for e-commerce, SaaS and lead-gen brands. Your first 15 ads in 7 days.">
+<title>KreateScale — Test 10x more creative without 10x the cost</title>
+<meta name="description" content="AI ad creatives at scale for 8- and 9-figure brands. Research, scripts and production. More ads, more tests, more winners.">
+<meta property="og:title" content="KreateScale — Test 10x more creative without 10x the cost">
+<meta property="og:description" content="AI ad creatives at scale. More ads, more tests, more winners.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kreatescale.com/">
 <meta property="og:image" content="https://kreatescale.com/assets/ads/07-poster.jpg">
@@ -61,10 +61,11 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 .hero .wrap{position:relative;padding-top:28px;padding-bottom:72px}
 .hero h1{margin:16px auto 0;max-width:980px;font-weight:700;font-size:clamp(34px,min(5.2vw,8.2vh),66px);line-height:1.04;letter-spacing:-.04em}
 .tag{display:inline-block;background:var(--red);color:#fff;padding:0 .2em .04em;border-radius:.14em;transform:rotate(-2deg)}
-.reel{margin:28px auto 0;display:flex;justify-content:center;gap:16px;height:clamp(240px,calc(100vh - 480px),500px)}
+.reel{margin:24px auto 0;display:flex;justify-content:center;gap:16px;height:clamp(230px,calc(100vh - 530px),480px)}
 .reel .phone{position:relative;height:100%;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--ink);box-shadow:0 30px 60px -24px var(--red-glow),0 14px 30px -16px rgba(10,10,10,.45)}
 .reel .phone:nth-child(2){transform:translateY(-12px)}
 .reel video{width:100%;height:100%;object-fit:cover}
+.hero-sub{margin:14px 0 0;font-family:var(--display);font-weight:600;font-size:clamp(18px,2vw,24px);letter-spacing:-.01em}
 .hero-cta{margin-top:24px;display:flex;justify-content:center}
 .assure{margin:12px 0 0;font-size:14px;color:var(--muted)}
 @media (max-width:640px){.hero h1 br{display:none}.reel{height:auto;gap:10px}.reel .phone{height:auto;width:31%}.reel .phone:nth-child(2){transform:none}}
@@ -78,7 +79,7 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 .track.a{animation:scroll3 70s linear infinite}
 .track.b{animation:scroll3 60s linear infinite reverse}
 .track:hover{animation-play-state:paused}
-@keyframes scroll3{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
+@keyframes scroll3{from{transform:translateX(0)}to{transform:translateX(-25%)}}
 @media (max-width:640px){.track{gap:44px;padding-left:44px;height:72px}.track img{transform:scale(.75)}}
 
 /* Pain band */
@@ -103,7 +104,7 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 .work{padding-top:112px}
 .work .intro{text-align:center;max-width:1000px;margin:0 auto}
 .work .intro h2{font-size:clamp(44px,6.6vw,92px);line-height:1;letter-spacing:-.04em}
-.work .intro p{margin:14px 0 0;font-size:15px;color:var(--muted)}
+.work .intro p{margin:18px 0 0;font-size:20px;color:var(--text)}
 .wall{margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .ad{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
 .ad.full{cursor:default}
@@ -126,6 +127,10 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 /* Process */
 .process{margin-top:112px;background:var(--soft)}
 .process .wrap{padding-top:104px;padding-bottom:104px}
+.steps5{margin-top:48px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.steps5{grid-template-columns:repeat(2,minmax(0,1fr))}.steps5 .step:last-child{grid-column:1 / -1}}
+@media (max-width:600px){.steps5{grid-template-columns:1fr}}
+.steps5 .step{padding:24px}
 .step{background:#fff;border:1.5px solid var(--ink);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,box-shadow .25s ease}
 .step:hover{transform:translateY(-4px);box-shadow:0 22px 44px -18px rgba(10,10,10,.35)}
 .step .n{margin:0;font-family:var(--display);font-weight:700;font-size:52px;line-height:1;letter-spacing:-.04em;color:var(--red)}
@@ -200,7 +205,8 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 <section class="hero" id="top">
   <div class="wrap">
     <p class="pill"><span class="dot"></span>AI ad creatives at scale</p>
-    <h1>15 scroll-stopping AI ads,<br> <em class="s">delivered in</em> <span class="tag">7 days.</span></h1>
+    <h1>Test <span class="tag">10x more creative</span><br> <em class="s">without 10x the cost.</em></h1>
+    <p class="hero-sub">More ads, more tests, more winners.</p>
     <div class="reel" aria-label="Examples of our ads">
       <div class="phone"><video src="assets/ads/03-loop.mp4" poster="assets/ads/03-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video></div>
       <div class="phone"><video src="assets/ads/07-loop.mp4" poster="assets/ads/07-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video></div>
@@ -239,7 +245,8 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 <section class="work" id="work">
   <div class="wrap-wide">
     <div class="intro">
-      <h2>Ads that <em class="s red">stop the scroll.</em></h2>
+      <h2>AI Ads that <em class="s red">stop the scroll.</em></h2>
+      <p>Every format, every niche. Built to test, made to scale.</p>
     </div>
     <div class="wall" id="wall"></div>
   </div>
@@ -248,11 +255,12 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 <section class="process" id="process">
   <div class="wrap">
     <h2>Your first 15 ads in 7 days. <em class="s red">Here's exactly how.</em></h2>
-    <div class="cards4" style="margin-top:48px">
-      <div class="step"><p class="n">01</p><h3>Research</h3><p>We mine your reviews, Reddit threads and your competitors' winning ads to find the exact words your buyers use.</p></div>
-      <div class="step"><p class="n">02</p><h3>Concepts &amp; scripts</h3><p>We turn those words into angles and scripts, with 3 to 4 hooks per concept, so every idea gets a real test.</p></div>
-      <div class="step"><p class="n">03</p><h3>You approve</h3><p>You sign off on every script before we produce a single frame. No surprises.</p></div>
-      <div class="step dark"><p class="n">04</p><h3>Launch-ready ads</h3><p>AI actors, voices, b-roll and edits, delivered ready to upload. Your media buyer hits publish.</p></div>
+    <div class="steps5">
+      <div class="step"><p class="n">01</p><h3>Research</h3><p>We mine your reviews, Reddit threads, TikTok and Facebook comments and your competitors' winning ads to find the exact words your buyers use.</p></div>
+      <div class="step"><p class="n">02</p><h3>Concepts &amp; scripts</h3><p>We turn those words into angles and scripts, with tons of variations per concept, so every idea gets a real test.</p></div>
+      <div class="step"><p class="n">03</p><h3>You approve</h3><p>You sign off on every script before we produce a single frame.</p></div>
+      <div class="step"><p class="n">04</p><h3>Launch-ready ads</h3><p>AI actors, voices, b-roll and edits, delivered ready to upload. Your media buyer just hits publish.</p></div>
+      <div class="step dark"><p class="n">05</p><h3>Scale</h3><p>We study, learn and then double down on what wins: new hooks, new angles and new formats on your best performers, every week.</p></div>
     </div>
   </div>
 </section>
@@ -310,17 +318,16 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
   // Client logos: [file, name, height in px]. The first row leads with the best-known brands.
   var rowA = [
     ['arcads', 'Arcads', 52], ['nancy', 'Nancy', 72], ['im8', 'IM8', 60], ['ufc', 'UFC', 64],
-    ['raptv', 'RapTV', 80], ['smel', 'Smel', 60], ['stryde', 'Stryde', 64],
-    ['healthson', 'Healthson', 42], ['reussir', 'Réussir Franchise', 60]
+    ['smel', 'Smel', 60], ['stryde', 'Stryde', 64], ['healthson', 'Healthson', 42]
   ];
   var rowB = [
-    ['airestech', 'Airestech', 46], ['acl', 'Ad Creators Lab', 84], ['epicadslab', 'Epic Ads Lab', 76],
-    ['lysulin', 'Lysulin', 56], ['rbc', 'Rugged Beard Company', 92], ['rehm', 'Rehm Copy', 72],
-    ['vpp', 'Video Production+', 40], ['wonderspray', "Dr. Burd's Wonder Spray", 84]
+    ['raptv', 'RapTV', 80], ['reussir', 'Réussir Franchise', 60], ['acl', 'Ad Creators Lab', 84],
+    ['epicadslab', 'Epic Ads Lab', 76], ['rbc', 'Rugged Beard Company', 92], ['rehm', 'Rehm Copy', 72],
+    ['vpp', 'Video Production+', 40]
   ];
   function fillTrack(el, logos) {
-    // Three copies so the loop never shows a gap, even on very wide screens.
-    for (var copy = 0; copy < 3; copy++) {
+    // Four copies so the loop never shows a gap, even on very wide screens.
+    for (var copy = 0; copy < 4; copy++) {
       logos.forEach(function (l) {
         var img = document.createElement('img');
         img.src = 'assets/logos/' + l[0] + '.png';
