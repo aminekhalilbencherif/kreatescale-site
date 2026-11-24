@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KreateScale — AI ad production at volume</title>
+<meta name="description" content="Send the brief, get launch-ready AI ads back. Specialist editors for every format, unlimited revisions, and the volume to scale.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="KreateScale — AI ad production at volume">
+<meta property="og:description" content="Send the brief, get launch-ready AI ads back. Specialist editors, unlimited revisions, real volume.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kreatescale.com/work">
+<meta property="og:image" content="https://kreatescale.com/assets/ads/07-poster.jpg">
+<meta name="theme-color" content="#9B111E">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#9B111E; --red-glow:rgba(155,17,30,.6); --ink:#0A0A0A; --text:#3A3A3A; --muted:#5A5A5A;
+  --line:#E6E4E0; --soft:#F5F4F2;
+  --display:'Space Grotesk',system-ui,sans-serif; --serif:'Instrument Serif',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.wrap-wide{max-width:1284px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);margin:0}
+h2{font-weight:700;font-size:clamp(34px,4.6vw,60px);line-height:1.03;letter-spacing:-.035em}
+em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.red{color:var(--red)}
+section{scroll-margin-top:80px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 32px;border-radius:999px;border:0;cursor:pointer;font-family:inherit;background:var(--red);color:#fff;font-weight:600;font-size:17px;text-decoration:none;box-shadow:0 18px 36px -14px rgba(155,17,30,.75);transition:transform .2s ease,filter .2s ease}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.btn svg{width:20px;height:20px}
+.btn-sm{min-height:44px;padding:0 22px;font-size:15px;box-shadow:0 10px 24px -10px rgba(155,17,30,.7)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--ink);box-shadow:none}
+.btn-ghost:hover{filter:none;background:var(--soft)}
+
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--red);display:inline-block;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+
+/* Nav */
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em}
+.brand span{color:var(--red);font-size:18px}
+.nav-links{display:flex;gap:28px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--text)}
+.nav-links a:hover{color:var(--ink)}
+@media (max-width:820px){.nav-links{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;text-align:center}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(#D9D6D1 1.2px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:linear-gradient(#000,#000 35%,transparent 90%);mask-image:linear-gradient(#000,#000 35%,transparent 90%);pointer-events:none}
+.hero .wrap{position:relative;padding-top:56px;padding-bottom:56px}
+.hero h1{margin:20px auto 0;max-width:1000px;font-weight:700;font-size:clamp(38px,6vw,80px);line-height:1.03;letter-spacing:-.04em}
+.tag{display:inline-block;background:var(--red);color:#fff;padding:0 .2em .04em;border-radius:.14em;transform:rotate(-2deg)}
+.hero .sub{margin:24px auto 0;max-width:640px;font-size:19px;color:var(--text)}
+.hero-cta{margin-top:32px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.stats{margin:52px auto 0;max-width:980px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid var(--ink);border-radius:20px;background:#fff;overflow:hidden}
+.stat{padding:22px 12px;border-left:1.5px solid var(--ink)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(28px,3.6vw,44px);line-height:1;letter-spacing:-.04em}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1.5px solid var(--ink)}
+}
+
+/* Logos */
+.logos{border-top:1px solid var(--line)}
+.logos .label{margin:0;padding:40px 24px 4px;text-align:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.marquee{overflow:hidden;padding:12px 0 24px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.track{display:flex;align-items:center;gap:60px;width:max-content;padding-left:60px;height:84px;animation:scroll2 80s linear infinite}
+.track img{width:auto;flex-shrink:0}
+.track:hover{animation-play-state:paused}
+@keyframes scroll2{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:640px){.track{gap:40px;padding-left:40px;height:64px}.track img{transform:scale(.75)}}
+
+/* Ticker */
+.ticker{background:var(--ink);color:#fff;overflow:hidden;padding:20px 0}
+.ticker .row{display:flex;gap:28px;width:max-content;padding-left:28px;align-items:center;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;animation:scroll2 28s linear infinite}
+.ticker .row span{display:inline-flex;align-items:center;gap:28px}
+.ticker .row i{color:#E5484D;font-style:normal;font-size:18px}
+
+/* Work wall */
+.work{padding-top:96px}
+.work .intro{text-align:center;max-width:1000px;margin:0 auto}
+.work .intro h2{font-size:clamp(48px,7.4vw,104px);line-height:1;letter-spacing:-.045em}
+.work .intro p{margin:16px 0 0;font-size:17px;color:var(--text)}
+.wall{margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ad{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.ad[hidden]{display:none}
+.ad.full{cursor:default}
+.ad.full:hover{transform:none}
+.ad.full .play{display:none}
+.ad:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 26px 46px -14px var(--red-glow)}
+.play:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.ad video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border:0;padding:0;cursor:pointer;border-radius:999px;background:var(--red);box-shadow:0 0 0 8px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.ad:hover .play{transform:translate(-50%,-50%) scale(1.08)}
+.play svg{width:24px;height:24px;margin-left:3px;fill:#fff}
+.more{margin-top:32px;display:flex;justify-content:center}
+.more[hidden]{display:none}
+.after-wall{margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.after-wall p{margin:0;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.2}
+@media (max-width:1000px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){
+  .wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .ad{border-radius:12px}
+  .ad:hover{transform:none}
+  .play{width:52px;height:52px;box-shadow:0 0 0 6px rgba(155,17,30,.3),0 12px 28px -8px rgba(0,0,0,.6)}
+  .play svg{width:18px;height:18px}
+}
+
+/* Process */
+.process{margin-top:112px;background:var(--soft)}
+.process .wrap{padding-top:104px;padding-bottom:104px}
+.process .lead{margin:18px 0 0;max-width:640px;font-size:18px;color:var(--text)}
+.steps{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.step{background:#fff;border:1.5px solid var(--ink);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,box-shadow .25s ease}
+.step:hover{transform:translateY(-4px);box-shadow:0 22px 44px -18px rgba(10,10,10,.35)}
+.step .n{margin:0;font-family:var(--display);font-weight:700;font-size:52px;line-height:1;letter-spacing:-.04em;color:var(--red)}
+.step h3{margin-top:8px;font-size:22px;font-weight:600;letter-spacing:-.01em}
+.step p{margin:0;color:var(--text);font-size:15px}
+.step.dark{background:var(--ink);color:#fff}
+.step.dark .n{color:#fff}
+.step.dark p{color:#DDDAD6}
+@media (max-width:960px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.steps{grid-template-columns:1fr}}
+
+/* Why band */
+.band{background:var(--red);color:#fff}
+.band .wrap{padding-top:104px;padding-bottom:104px}
+.band h2{max-width:900px;margin:0 auto;text-align:center}
+.cards4{margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.why{background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:28px}
+.why h3{font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+.why p{margin:12px 0 0;color:rgba(255,255,255,.88);font-size:15px}
+.fix{margin:44px auto 0;max-width:780px;text-align:center;font-family:var(--display);font-size:24px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+
+/* Book */
+.book{padding-top:112px}
+.panel{background:var(--ink);color:#fff;border-radius:36px;padding:80px 24px 56px;box-shadow:0 50px 90px -40px rgba(10,10,10,.6);text-align:center}
+.panel .pill{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.panel h2{margin:24px auto 0;max-width:940px;font-size:clamp(36px,5.2vw,72px);line-height:1.01;letter-spacing:-.04em}
+.panel h2 em{color:#E5484D}
+.panel p.lead{margin:20px auto 0;max-width:600px;font-size:18px;color:rgba(255,255,255,.88)}
+.cal{margin:48px auto 0;max-width:1000px;border-radius:22px;background:#fff;overflow:hidden}
+.calendly-inline-widget{min-width:320px;height:720px}
+.panel .alt{margin:28px 0 0;font-size:15px;color:#B8B5AF}
+.panel .alt a{color:#fff;font-weight:600}
+@media (max-width:640px){.panel{border-radius:24px;padding:56px 12px 28px}.calendly-inline-widget{height:1000px}}
+
+/* FAQ */
+.faq{padding-top:112px}
+.faq-grid{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.faq-side{flex:1 1 300px;min-width:0}
+.faq-side h2{font-size:clamp(34px,4.2vw,56px)}
+.faq-side p{margin:18px 0 0;font-size:17px;color:var(--text);max-width:360px}
+.faq-side .btn{margin-top:28px}
+.faq-list{flex:2 1 480px;min-width:0;border-top:1.5px solid var(--ink)}
+details{border-bottom:1.5px solid var(--ink)}
+summary{list-style:none;cursor:pointer;min-height:68px;padding:20px 8px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--display);font-size:20px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--soft)}
+summary .ico{width:32px;height:32px;border-radius:999px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s ease}
+summary .ico svg{width:16px;height:16px}
+details[open] summary .ico{transform:rotate(45deg)}
+details p{margin:0;padding:0 8px 24px;color:var(--text);max-width:640px}
+details p a{color:var(--red);font-weight:600}
+
+/* Footer */
+footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
+.foot{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;padding-top:56px;padding-bottom:32px}
+.foot .brand span{color:#E5484D}
+.foot p.tagline{margin:10px 0 0;color:#B8B5AF;font-size:15px;max-width:320px}
+.foot-cols{display:flex;gap:56px;flex-wrap:wrap}
+.foot-col{display:flex;flex-direction:column;gap:10px;font-size:15px}
+.foot-col .h{margin:0 0 4px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9A978F}
+.foot-col a{text-decoration:none;color:#DDDAD6}
+.foot-col a:hover{color:#fff}
+.copy{font-size:13px;color:#9A978F;padding-bottom:8px}
+.giant{margin:0;text-align:center;white-space:nowrap;font-family:var(--display);font-weight:700;font-size:clamp(64px,16.5vw,250px);line-height:.82;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px #4A4A4F;transform:translateY(12%)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .track,.ticker .row,.dot{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/"><span>⬦</span>KreateScale</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">The work</a>
+      <a href="#process">How we produce</a>
+      <a href="#why">Why us</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-sm" href="#book">Book a call</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="pill"><span class="dot"></span>AI ad production, done for you</p>
+    <h1>Send the brief. Get <em class="s" style="white-space:nowrap">launch-ready</em> AI ads back, <span class="tag">at volume.</span></h1>
+    <p class="sub">Your scripts, our specialist AI editors. No hiring, no training, no managing. Unlimited revisions on every ad.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#work">See the work</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>400+</b><span>ads produced</span></div>
+      <div class="stat"><b>40+</b><span>brands served</span></div>
+      <div class="stat"><b>20+</b><span>niches</span></div>
+      <div class="stat"><b class="red">100+</b><span>ads a month capacity</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="logos" aria-label="Clients">
+  <p class="label">Trusted by 8- and 9-figure brands across 20+ niches</p>
+  <div class="marquee"><div class="track" id="logos"></div></div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="row" id="ticker"></div></div>
+
+<section class="work" id="work">
+  <div class="wrap-wide">
+    <div class="intro">
+      <h2>The <em class="s red">work.</em></h2>
+      <p>A slice of the 400+ ads we've produced. Tap any ad to watch it with sound.</p>
+    </div>
+    <div class="wall" id="wall"></div>
+    <div class="more" id="more" hidden><button type="button" class="btn btn-ghost" id="more-btn">Show more ads</button></div>
+    <div class="after-wall">
+      <p>Want this quality, at this volume, for your brand?</p>
+      <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <h2>From your brief to a launch-ready ad. <em class="s red">Here's the machine.</em></h2>
+    <p class="lead">Volume without a system gives you slop. This is the system every single ad goes through.</p>
+    <div class="steps">
+      <div class="step"><p class="n">01</p><h3>You send the brief</h3><p>Your script, your references, your product assets. That's all we need to start.</p></div>
+      <div class="step"><p class="n">02</p><h3>We break it down</h3><p>Before anything is produced, we study it: the hook, the avatar, the tone, the references. If something is unclear, we ask now, not after delivery.</p></div>
+      <div class="step"><p class="n">03</p><h3>Matched to a specialist</h3><p>Every format has its own editors. Your Pixar ad goes to a Pixar editor, your podcast ad to a podcast editor. Each one is trained and coached in-house on that format.</p></div>
+      <div class="step"><p class="n">04</p><h3>Built on our system</h3><p>Editors work inside our internal workflows, the same ones behind 400+ ads. That's how quality stays the same at 10 ads or 100.</p></div>
+      <div class="step"><p class="n">05</p><h3>Checked before you see it</h3><p>Every ad is reviewed against your brief by a creative lead before it reaches you. You never get a first draft.</p></div>
+      <div class="step dark"><p class="n">06</p><h3>Delivered launch-ready</h3><p>You get a finished ad, ready to upload. Want changes? Revisions are unlimited until it's right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="why">
+  <div class="wrap">
+    <h2>The output of an in-house team. <em class="s">None of the hassle.</em></h2>
+    <div class="cards4">
+      <div class="why"><h3>No hiring</h3><p>Finding one good AI editor takes weeks of trials. We already found, tested and trained ours.</p></div>
+      <div class="why"><h3>No managing</h3><p>No onboarding, no feedback loops, no chasing deadlines. One brief in, one finished ad out.</p></div>
+      <div class="why"><h3>Unlimited revisions</h3><p>You don't pay per fix. We revise until the ad is ready to launch.</p></div>
+      <div class="why"><h3>Volume on demand</h3><p>Need more ads next month? Send more briefs. Our capacity scales with you, with nobody to re-hire.</p></div>
+    </div>
+    <p class="fix">More ads live means more tests. More tests means more winners. That's how you scale faster.</p>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap-wide">
+    <div class="panel">
+      <p class="pill"><span class="dot"></span>Free call</p>
+      <h2>Tell us your volume. <em class="s">We'll show you how we ship it.</em></h2>
+      <p class="lead">Pick a time below. Bring a script or a brief if you have one. You'll leave with a clear quote and a timeline. Free, no commitment.</p>
+      <div class="cal">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/aminekhelilbencherif/kreatescale-discovery-calls?hide_gdpr_banner=1&amp;primary_color=9b111e"></div>
+      </div>
+      <p class="alt">Need the research and scripts too? <a href="/">See our full service</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <h2>Before you <em class="s red">send a brief.</em></h2>
+      <p>Don't see your question? Ask it on the call.</p>
+      <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="faq-list">
+      <details open><summary>What do I need to send?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>A script or a brief, your product assets, and any reference ads you like. If the brief is rough, we tighten it with you before production starts.</p></details>
+      <details><summary>Which formats can you produce?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>AI UGC, Pixar-style animation, 3D films, singing ads, podcast ads, street interviews, cinematic drama, claymation, animated explainers and split-screens. If you've seen it in a feed, we can probably make it.</p></details>
+      <details><summary>How do revisions work?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>They're unlimited. You send notes, we fix, and we repeat until the ad is ready to launch.</p></details>
+      <details><summary>How is it priced?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Per concept, based on the format and your monthly volume. You get a clear quote on the call. No hidden fees.</p></details>
+      <details><summary>Can you write the scripts too?<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Yes. Our full service covers research, angles, scripts and production. <a href="/">See how it works</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="/"><span>⬦</span>KreateScale</a>
+      <p class="tagline">AI ad creatives at scale for brands that need more winners, faster.</p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><p class="h">This page</p><a href="#work">The work</a><a href="#process">How we produce</a><a href="#faq">FAQ</a><a href="#book">Book a call</a></div>
+      <div class="foot-col"><p class="h">KreateScale</p><a href="/">Full service</a><a href="https://www.instagram.com/kreatescale" rel="noopener" target="_blank">Instagram</a><a href="https://x.com/amine_ads" rel="noopener" target="_blank">X</a></div>
+    </div>
+  </div>
+  <div class="wrap copy">© <span id="year">2026</span> KreateScale. All rights reserved.</div>
+  <p class="giant" aria-hidden="true">KreateScale</p>
+</footer>
+
+<script>
+(function () {
+  // ---- Settings -------------------------------------------------------------
+  // To add ads: drop NN.mp4, NN-loop.mp4 and NN-poster.jpg into /assets/ads/
+  // (keep the numbering going) and raise ADS to the new total.
+  var ADS = 12;
+  var PAGE = 24; // tiles shown before the "Show more ads" button appears
+
+  // Client logos: [file, name, height in px], best-known brands first.
+  var logos = [
+    ['arcads', 'Arcads', 44], ['nancy', 'Nancy', 60], ['im8', 'IM8', 50], ['ufc', 'UFC', 54],
+    ['raptv', 'RapTV', 68], ['smel', 'Smel', 50], ['stryde', 'Stryde', 54],
+    ['healthson', 'Healthson', 36], ['reussir', 'Réussir Franchise', 50],
+    ['airestech', 'Airestech', 40], ['acl', 'Ad Creators Lab', 72], ['epicadslab', 'Epic Ads Lab', 64],
+    ['lysulin', 'Lysulin', 48], ['rbc', 'Rugged Beard Company', 78], ['rehm', 'Rehm Copy', 60],
+    ['vpp', 'Video Production+', 34], ['wonderspray', "Dr. Burd's Wonder Spray", 72]
+  ];
+  var track = document.getElementById('logos');
+  for (var copy = 0; copy < 2; copy++) { // doubled for a seamless loop
+    logos.forEach(function (l) {
+      var img = document.createElement('img');
+      img.src = '/assets/logos/' + l[0] + '.png';
+      img.alt = copy === 0 ? l[1] : '';
+      if (copy > 0) img.setAttribute('aria-hidden', 'true');
+      img.style.height = l[2] + 'px';
+      img.decoding = 'async';
+      track.appendChild(img);
+    });
+  }
+
+  // Format ticker, doubled for a seamless loop.
+  var formats = ['AI UGC', 'Pixar animation', '3D films', 'Singing ads', 'Podcast ads', 'Street interviews', 'Cinematic drama', 'Claymation', 'Animated explainers', 'Split-screen'];
+  var ticker = document.getElementById('ticker');
+  formats.concat(formats).forEach(function (f) {
+    var s = document.createElement('span');
+    s.textContent = f;
+    var i = document.createElement('i');
+    i.textContent = '⬦';
+    s.appendChild(i);
+    ticker.appendChild(s);
+  });
+
+  // Work wall. Each tile autoplays a short silent loop; tapping plays the full ad
+  // with sound right inside the tile, never full screen.
+  var wall = document.getElementById('wall');
+  var playSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+  for (var n = 1; n <= ADS; n++) {
+    var id = (n < 10 ? '0' : '') + n;
+    var tile = document.createElement('div');
+    tile.className = 'ad';
+    if (n > PAGE) tile.hidden = true;
+    tile.dataset.full = '/assets/ads/' + id + '.mp4';
+    tile.dataset.loop = '/assets/ads/' + id + '-loop.mp4';
+    tile.innerHTML =
+      '<video muted loop playsinline webkit-playsinline disablepictureinpicture preload="none" poster="/assets/ads/' + id + '-poster.jpg" data-src="/assets/ads/' + id + '-loop.mp4"></video>' +
+      '<button type="button" class="play" aria-label="Play ad ' + n + ' with sound">' + playSvg + '</button>';
+    wall.appendChild(tile);
+  }
+
+  // "Show more ads": reveals the next batch each time.
+  var more = document.getElementById('more');
+  function refreshMore() { more.hidden = !wall.querySelector('.ad[hidden]'); }
+  document.getElementById('more-btn').addEventListener('click', function () {
+    var hiddenTiles = wall.querySelectorAll('.ad[hidden]');
+    for (var i = 0; i < hiddenTiles.length && i < PAGE; i++) hiddenTiles[i].hidden = false;
+    refreshMore();
+  });
+  refreshMore();
+
+  var current = null; // the tile playing its full ad
+
+  function backToLoop(tile) {
+    var v = tile.querySelector('video');
+    tile.classList.remove('full');
+    v.controls = false;
+    v.muted = true;
+    v.loop = true;
+    v.src = tile.dataset.loop;
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+
+  function playFull(tile) {
+    if (current && current !== tile) backToLoop(current);
+    current = tile;
+    var v = tile.querySelector('video');
+    tile.classList.add('full');
+    v.loop = false;
+    v.src = tile.dataset.full;
+    v.muted = false;
+    v.controls = true;
+    v.setAttribute('controlslist', 'nofullscreen nodownload noremoteplayback');
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+    v.onended = function () { backToLoop(tile); if (current === tile) current = null; };
+  }
+
+  wall.addEventListener('click', function (e) {
+    var tile = e.target.closest('.ad');
+    if (!tile || tile.classList.contains('full')) return; // the video's own controls handle it
+    playFull(tile);
+  });
+
+  // Only load and play the loops that are on screen; pause anything scrolled out of view.
+  var tiles = wall.querySelectorAll('.ad');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var tile = e.target;
+        var v = tile.querySelector('video');
+        if (e.isIntersecting) {
+          if (!v.getAttribute('src')) v.src = v.dataset.src;
+          if (!tile.classList.contains('full')) {
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          }
+        } else if (v.getAttribute('src')) {
+          v.pause();
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    tiles.forEach(function (t) { io.observe(t); });
+  } else {
+    tiles.forEach(function (t) { var v = t.querySelector('video'); v.src = v.dataset.src; v.autoplay = true; });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
