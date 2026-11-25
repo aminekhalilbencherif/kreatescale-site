@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KreateScale — Our work: AI ads for 8- and 9-figure brands</title>
-<meta name="description" content="A slice of the 400+ AI ads KreateScale has produced, and how we produce them at volume: specialist editors, unlimited revisions, launch-ready files.">
+<meta name="description" content="Your AI ad machine: scale volume without losing quality or speed. Watch the ads we produce and see how we produce them.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="KreateScale — Our work">
-<meta property="og:description" content="A slice of the 400+ AI ads we've produced, and how we produce them at volume.">
+<meta property="og:description" content="Your AI ad machine. Scale volume without losing quality or speed.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kreatescale.com/work">
 <meta property="og:image" content="https://kreatescale.com/assets/ads/07-poster.jpg">
@@ -61,22 +61,19 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 /* Hero */
 .hero{position:relative;overflow:hidden;text-align:center}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(#D9D6D1 1.2px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:linear-gradient(#000,#000 35%,transparent 90%);mask-image:linear-gradient(#000,#000 35%,transparent 90%);pointer-events:none}
-.hero .wrap{position:relative;padding-top:22px;padding-bottom:4px}
-.hero h1{margin:16px auto 0;max-width:1100px;font-weight:700;font-size:clamp(36px,min(5.6vw,9.4vh),80px);line-height:1.02;letter-spacing:-.045em}
+.hero .wrap{position:relative;padding-top:26px;padding-bottom:0}
+.hero h1{margin:16px auto 0;max-width:1100px;font-weight:700;font-size:clamp(40px,min(6vw,10vh),84px);line-height:1;letter-spacing:-.045em}
+.hero h1 em{display:block;margin-top:.22em;font-size:.6em;line-height:1.1}
 .tag{display:inline-block;background:var(--red);color:#fff;padding:0 .2em .04em;border-radius:.14em;transform:rotate(-2deg)}
 .sub{margin:18px auto 0;max-width:640px;font-size:19px;color:var(--text)}
 .hero .sub{margin-top:12px;font-size:16px;color:var(--muted)}
 .hero-cta{margin-top:20px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.stats{margin:52px auto 0;max-width:980px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid var(--ink);border-radius:20px;background:#fff;overflow:hidden}
+.stats{margin:52px auto 0;max-width:780px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1.5px solid var(--ink);border-radius:20px;background:#fff;overflow:hidden}
 .stat{padding:22px 12px;border-left:1.5px solid var(--ink)}
 .stat:first-child{border-left:0}
 .stat b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(28px,3.6vw,44px);line-height:1;letter-spacing:-.04em}
 .stat span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
-@media (max-width:640px){
-  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .stat:nth-child(3){border-left:0}
-  .stat:nth-child(n+3){border-top:1.5px solid var(--ink)}
-}
+@media (max-width:640px){.stat{padding:16px 6px}.stat span{font-size:12px}}
 
 /* Pitch */
 .pitch{padding-top:104px;text-align:center}
@@ -100,7 +97,19 @@ header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdro
 .ticker .row i{color:#E5484D;font-style:normal;font-size:18px}
 
 /* Work wall */
-.work{padding-top:0}
+/* Moving rows of ads in the header */
+.reel{position:relative;margin-top:34px;padding-bottom:10px;display:flex;flex-direction:column;gap:12px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.reel-row{display:flex;gap:12px;width:max-content;padding-left:12px}
+.reel-row.a{animation:scroll3 34s linear infinite}
+.reel-row.b{animation:scroll3 30s linear infinite reverse}
+@keyframes scroll3{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
+.reel-tile{flex:0 0 auto;width:clamp(104px,10.5vw,158px);aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:var(--ink)}
+.reel-tile video{width:100%;height:100%;object-fit:cover}
+@media (max-width:640px){.reel{gap:8px;margin-top:26px}.reel-row{gap:8px;padding-left:8px}.reel-tile{border-radius:9px}}
+
+.work{padding-top:88px}
+.work .intro{text-align:center}
+.work .intro p{margin:14px 0 0;font-size:17px;color:var(--text)}
 .wall{margin-top:26px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-flow:row dense;gap:12px}
 .ad{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--ink);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
 .ad[hidden]{display:none}
@@ -197,7 +206,7 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .track,.ticker .row,.dot{animation:none}
+  .track,.ticker .row,.dot,.reel-row{animation:none}
 }
 </style>
 </head>
@@ -221,17 +230,24 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
 <section class="hero" id="top">
   <div class="wrap">
     <p class="pill"><span class="dot"></span>AI ad production, done for you at scale</p>
-    <h1>400+ AI ads shipped.<br> <em class="s red">Judge them yourself.</em></h1>
-    <p class="sub">Tap any ad to watch it with sound.</p>
+    <h1>Your AI ad machine. <em class="s red">Scale volume without losing quality or speed.</em></h1>
     <div class="hero-cta">
       <a class="btn" href="#book">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost" href="#process">How we produce</a>
     </div>
   </div>
+  <div class="reel" aria-hidden="true">
+    <div class="reel-row a" id="reel-a"></div>
+    <div class="reel-row b" id="reel-b"></div>
+  </div>
 </section>
 
 <section class="work" id="work" aria-label="Our ads">
   <div class="wrap-wide">
+    <div class="intro">
+      <h2>Watch <em class="s red">the work.</em></h2>
+      <p>Tap any ad to watch it with sound.</p>
+    </div>
     <div class="wall" id="wall"></div>
     <div class="more" id="more" hidden><button type="button" class="btn btn-ghost" id="more-btn">Show more ads</button></div>
     <div class="after-wall">
@@ -248,7 +264,6 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
     <h2>Send the brief. Get <em class="s" style="white-space:nowrap">launch-ready</em> AI ads back, <span class="tag">at volume.</span></h2>
     <p class="sub">Your scripts, our specialist AI editors. No hiring, no training, no managing. Unlimited revisions on every ad.</p>
     <div class="stats">
-      <div class="stat"><b>400+</b><span>ads produced</span></div>
       <div class="stat"><b>40+</b><span>brands served</span></div>
       <div class="stat"><b>20+</b><span>niches</span></div>
       <div class="stat"><b class="red">100+</b><span>ads a month capacity</span></div>
@@ -269,7 +284,7 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
       <div class="step"><p class="n">01</p><h3>You send the brief</h3><p>Your script, your references, your product assets. That's all we need to start.</p></div>
       <div class="step"><p class="n">02</p><h3>We break it down</h3><p>Before anything is produced, we study it: the hook, the avatar, the tone, the references. If something is unclear, we ask now, not after delivery.</p></div>
       <div class="step"><p class="n">03</p><h3>Matched to a specialist</h3><p>Every format has its own editors. Your Pixar ad goes to a Pixar editor, your podcast ad to a podcast editor. Each one is trained and coached in-house on that format.</p></div>
-      <div class="step"><p class="n">04</p><h3>Built on our system</h3><p>Editors work inside our internal workflows, the same ones behind 400+ ads. That's how quality stays the same at 10 ads or 100.</p></div>
+      <div class="step"><p class="n">04</p><h3>Built on our system</h3><p>Editors work inside our internal workflows, the same ones behind every ad on this page. That's how quality stays the same at 10 ads or 100.</p></div>
       <div class="step"><p class="n">05</p><h3>Checked before you see it</h3><p>Every ad is reviewed against your brief by a creative lead before it reaches you. You never get a first draft.</p></div>
       <div class="step dark"><p class="n">06</p><h3>Delivered launch-ready</h3><p>You get a finished ad, ready to upload. Want changes? Revisions are unlimited until it's right.</p></div>
     </div>
@@ -342,7 +357,7 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
   // ---- Settings -------------------------------------------------------------
   // To add ads: drop NN.mp4, NN-loop.mp4 and NN-poster.jpg into /assets/ads/
   // (keep the numbering going) and raise ADS to the new total.
-  var ADS = 12;
+  var ADS = 23;
   var PAGE = 24; // tiles shown before the "Show more ads" button appears
 
   // Client logos: [file, name, height in px], best-known brands first.
@@ -377,6 +392,39 @@ footer{margin-top:112px;background:var(--ink);color:#fff;overflow:hidden}
     s.appendChild(i);
     ticker.appendChild(s);
   });
+
+  // Header rows: every ad as a small silent clip, moving fast in two opposite rows.
+  // Three copies per row so the loop never shows a gap on very wide screens.
+  function fillReel(el, from, to) {
+    for (var copy = 0; copy < 3; copy++) {
+      for (var n = from; n <= to; n++) {
+        var id = (n < 10 ? '0' : '') + n;
+        var d = document.createElement('div');
+        d.className = 'reel-tile';
+        d.innerHTML = '<video muted loop playsinline webkit-playsinline disablepictureinpicture preload="none" poster="/assets/ads/' + id + '-poster.jpg" data-src="/assets/ads/' + id + '-thumb.mp4"></video>';
+        el.appendChild(d);
+      }
+    }
+  }
+  var half = Math.ceil(ADS / 2);
+  fillReel(document.getElementById('reel-a'), 1, half);
+  fillReel(document.getElementById('reel-b'), half + 1, ADS);
+  var reelVideos = document.querySelectorAll('.reel-tile video');
+  if ('IntersectionObserver' in window) {
+    var reelIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (!v.getAttribute('src')) v.src = v.dataset.src;
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        } else if (v.getAttribute('src')) {
+          v.pause();
+        }
+      });
+    }, { rootMargin: '0px 160px' });
+    reelVideos.forEach(function (v) { reelIO.observe(v); });
+  }
 
   // Work wall. Each tile autoplays a short silent loop; tapping plays the full ad
   // with sound right inside the tile, never full screen.
